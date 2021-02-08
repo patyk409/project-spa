@@ -1,0 +1,69 @@
+.main-nav {
+    position: fixed;
+    top: 0;
+    padding: 10px 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+
+    .main-nav-holder {
+        @include flexbox;
+        justify-content: space-between;
+        align-items: center;
+
+        .brand {
+            display: inline-block;
+            height: 50px;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        %mobile-controls {
+            font-size: 30px;
+            cursor: pointer
+        }
+
+        .mobile-hamburger {
+            @extend %mobile-controls;
+            color: $primary-color;
+        }
+
+        .mobile-closer {
+            @extend %mobile-controls;
+            color: #fff;
+        }
+
+        .open-menu-holder {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 15px 25px;
+            width: 480px;
+            max-width: 480px;
+            text-align: right;
+            background-color: $primary-color;
+
+            &.open {
+                display: block;
+            }
+
+            .menu-list {
+                list-style: none;
+
+                .menu-list-item {
+                    padding: 20px 0;
+                    font-size: 50px;
+                    text-transform: uppercase;
+
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
