@@ -20,8 +20,15 @@
 @import 'layout/header';
 @import 'layout/about';
 @import 'layout/services';
+@import 'layout/team';
+@import 'layout/form';
+@import 'layout/contact';
+@import 'layout/footer';
+
 
 //--------------------------------------
 //=====> Components
 //--------------------------------------
 @import 'components/buttons';
+@import 'components/infoboxes';
+@import 'components/inputs';

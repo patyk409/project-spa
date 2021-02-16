@@ -1,0 +1,19 @@
+.page-footer {
+    padding: 30px 0;
+    text-align: center;
+
+    img {
+        width: 100px;
+    }
+
+    .footer-nav {
+        .menu-list {
+            @include menu-list;
+            padding: 20px 0;
+        }
+
+        .menu-list-item {
+            padding: 15px 0;
+        }
+    }
+}

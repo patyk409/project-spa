@@ -1,0 +1,40 @@
+.appointment {
+    @include flexbox;
+    padding: 0;
+
+    .desktop-bg {
+        display: none;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 40%;
+    }
+
+    #appointment-form {
+        width: 100%;
+        background-color: $primary-color;
+        padding: 80px 40px;
+    }
+
+    @media all and (min-width: $large) {
+        .desktop-bg {
+            display: block;
+        }
+
+        #appointment-form {
+            width: 60%;
+            padding: 80px;
+            @include flexbox;
+            justify-content: space-between;
+
+            input:not(input[type='submit']),
+            select {
+                width: 48%;
+            }
+
+            textarea {
+                margin: 60px 0;
+            }
+        }
+    }
+}

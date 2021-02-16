@@ -21,12 +21,33 @@ h2 {
     font-size: 48px;
 }
 
-a {
+h3 {
+    font-size: 22px;
+}
+
+a,
+input[type='submit'] {
     transition: all .3s;
 }
 
 section {
     padding: 30px 0;
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 40px;
+
+        p {
+            margin: auto;
+            font-weight: 300;
+        }
+
+        @media all and (min-width: $medium) {
+            p {
+                max-width: 70%;
+            }
+        }
+    }
 }
 
 p {
