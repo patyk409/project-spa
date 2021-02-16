@@ -65,5 +65,42 @@
                 }
             }
         }
+
+        @media all and (min-width: $large) {
+            justify-content: flex-start;
+
+            .brand {
+                height: 80px;
+            }
+
+            %mobile-controls {
+                display: none;
+            }
+
+            .open-menu-holder {
+                display: block;
+                position: static;
+                align-self: flex-start;
+                padding: 0;
+                width: auto;
+                max-width: 100%;
+                background-color: transparent;
+
+                .menu-list {
+                    background-color: #fff;
+
+                    .menu-list-item {
+                        display: inline-block;
+                        margin: 0 20px;
+                        font-size: initial;
+
+                        a {
+                            color: $secondary-color;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

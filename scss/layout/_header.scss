@@ -1,0 +1,99 @@
+.main-header {
+    @include flexbox;
+    @include flex-settings(flex-start, center);
+    position: relative;
+    height: 700px;
+
+    .main-header-description {
+        color: $secondary-color;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700;
+        font-family: $secondary-font;
+    }
+
+    h1 {
+        color: $secondary-color;
+        font-size: 50px;
+    }
+
+    .main-header-content {
+        color: $secondary-text-color;
+    }
+
+    .buttons-panel {
+        margin-top: 40px;
+
+        .reserve {
+            padding: 15px 20px;
+            display: inline-block;
+            color: #fff;
+            background-color: $primary-color;
+            text-decoration: none;
+
+            &:hover {
+                background-color: $button-bg;
+            }
+        }
+
+        .watch {
+            display: inline-block;
+            position: relative;
+            margin-left: 15px;
+            padding: 15px 5px 15px 45px;
+            text-decoration: none;
+            color: $button-bg;
+
+            i {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 34px;
+                transition: all .3s;
+            }
+        }
+    }
+
+    .main-header-flowers {
+        position: absolute;
+        top: 35%;
+        left: 0;
+        max-width: 10%;
+        z-index: -10;
+    }
+
+    .main-header-bg {
+        display: none;
+    }
+
+    @media all and (max-width: $extra-small) {
+        .buttons-panel {
+            .reserve,
+            .watch {
+                margin-left: 0;
+            }
+        }
+    }
+
+    @media all and (min-width: $large) {
+        .main-header-holder {
+            width: 60%;
+        }
+
+        .main-header-bg {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            max-width: 30%;
+            z-index: 10000;
+        }
+    }
+
+    @media all and (min-width: $extra-large) {
+        .main-header-bg {
+            max-width: 40%;
+        }
+    }
+}
