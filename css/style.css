@@ -674,9 +674,24 @@ p {
 }
 
 .appointment #appointment-form {
+  padding: 80px 40px;
   width: 100%;
   background-color: #1ba4ce;
-  padding: 80px 40px;
+}
+
+.appointment #appointment-form .appointment-info {
+  width: 100%;
+  display: none;
+}
+
+.appointment #appointment-form .appointment-info.error {
+  color: #f00;
+  display: block;
+}
+
+.appointment #appointment-form .appointment-info.send {
+  color: #fff;
+  display: block;
 }
 
 @media all and (min-width: 992px) {
